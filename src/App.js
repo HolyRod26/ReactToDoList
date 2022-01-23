@@ -28,6 +28,8 @@ function App() {
     setInputValue(taskValue);
   };
 
+  const handleDelete = (taskValue) => {};
+
   return (
     <div className="App">
       <h1>Tareas por hacer: {count}</h1>
