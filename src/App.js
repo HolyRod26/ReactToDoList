@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import List from "./components/List";
-import Input from "./components/Input";
 import Button from "./components/Button";
+import Form from "./components/Form";
 
 /* 
   Make sure you use the hooks ‘useState’ and ‘useEffect’
@@ -26,16 +26,21 @@ function App() {
     ]);
   }, []);
 
+  useEffect(() => {
+    setCount(stateList.length);
+  }, [stateList.length]);
+
   const handleAddingItem = () => {
     setStateList((oldState) => [...oldState, inputValue]);
-    setCount(stateList.length);
-    console.log("length", stateList.length);
+    console.log(inputValue);
     console.log("Lista de tareas", stateList);
   };
 
   // To change the state of the inputValue state to add it to the StateList
-  const handleChange = (taskValue) => {
-    setInputValue(taskValue);
+  const handleChange = (taskToSave) => {
+    setInputValue(taskToSave);
+    // console.log(inputValue);
+    // console.log(inputValue);
   };
 
   const handleDelete = (taskValue) => {
@@ -45,9 +50,7 @@ function App() {
   return (
     <div className="App">
       <h1>Tareas por hacer: {count}</h1>
-      <Input handleChange={handleChange} value={inputValue} />
-      <Button label="Agregar nueva tarea" onClick={handleAddingItem} />
-      <List toDisplay={stateList} handleDelete={handleDelete}></List>
+      <Form />
     </div>
   );
 }
