@@ -1,4 +1,6 @@
-export default function Input({ handleChange, value }) {
+import "./Input.css";
+
+export default function Input({ handleChange, value, styleObj }) {
   return (
     <input
       type="text"
@@ -6,6 +8,7 @@ export default function Input({ handleChange, value }) {
         handleChange(e.target.value);
       }}
       value={value}
+      className="input-task"
     />
   );
 }
