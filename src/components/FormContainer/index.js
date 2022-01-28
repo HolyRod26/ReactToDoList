@@ -2,7 +2,7 @@ import Form from "../Form";
 import List from "../List";
 import "./Container.css";
 import React, { useState, useEffect } from "react";
-
+//
 function FormContainer() {
   const [list, setList] = useState([]);
 
@@ -23,7 +23,7 @@ function FormContainer() {
   useEffect(() => {
     setList(InitialItems);
     console.log(InitialItems);
-  }, []);
+  }, [InitialItems]);
 
   /*useEffect(() => {
     const miStorage = window.localStorage;

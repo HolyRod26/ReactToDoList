@@ -2,7 +2,9 @@ import Input from "../Input";
 import Button from "../Button";
 import "./Form.css";
 
-import React, { useState, useEffect } from "react";
+//Form cambiado
+
+import React, { useState } from "react";
 
 export default function Form({ label, handleAddingItem }) {
   // Creador de ToDos
