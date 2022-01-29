@@ -1,29 +1,22 @@
 import Input from "../Input";
 import Button from "../Button";
-import "./Form.css";
+import { v4 as uuidv4 } from "uuid";
+import "./index.css";
 
 //Form cambiado
 
 import React, { useState } from "react";
 
-export default function Form({ label, handleAddingItem }) {
-  // Creador de ToDos
-  function Task(title = "No title...", completed = false) {
-    this.id = Date.now();
-    this.title = title;
-    this.completed = completed;
-  }
-
+export default function Form({ label, handleAddingItem, Task }) {
   const [inputValue, setInputValue] = useState("");
-  const handleChange = (taskToSave) => {
+
+  const handleInputChange = (taskToSave) => {
     setInputValue(taskToSave);
-    console.log(inputValue);
   };
 
-  const onSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("prevent default");
-    const Taskcreated = new Task(inputValue);
+    const Taskcreated = Task(inputValue);
     inputValue
       ? handleAddingItem(Taskcreated)
       : alert("No has ingresado una tarea");
@@ -31,10 +24,14 @@ export default function Form({ label, handleAddingItem }) {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={handleSubmit}>
       <label>{label}</label>
-      <Input handleChange={handleChange} value={inputValue} />
-      <Button typeButton={1} label={"Add Task to List"} onClick={onSubmit} />
+      <Input handleInputChange={handleInputChange} value={inputValue} />
+      <Button
+        isSubmit={true}
+        label={"Add Task to List"}
+        onClick={handleSubmit}
+      />
     </form>
   );
 }

@@ -1,0 +1,17 @@
+.list-item {
+  width: 30%;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  height: 15%;
+  background-color: lightgray;
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+p {
+  margin: 1rem;
+}
+
+/*# sourceMappingURL=index.css.map */

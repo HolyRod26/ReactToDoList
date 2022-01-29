@@ -1,12 +1,18 @@
 import Button from "../Button";
-import "./ListItem.css";
+import PropTypes from "prop-types";
+import "./index.css";
 
-export default function ListItem({ content, onClick }) {
+export default function ListItem({ title, onClick }) {
   return (
     <div className="list-item">
-      <p>{content.title}</p>
+      <p>{title}</p>
 
       <Button label="X" onClick={onClick} />
     </div>
   );
 }
+
+ListItem.propTypes = {
+  title: PropTypes.string,
+  onClick: PropTypes.func,
+};

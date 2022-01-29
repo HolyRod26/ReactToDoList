@@ -1,18 +1,18 @@
 import React from "react";
 import ListItem from "../ListItem";
+import "./index.css";
 
 // TODO: Make list expand items, not just display all the array
 
-function List({ list, setList, handleDelete }) {
-  const listItems = list.map((item) => (
+export default function List({ list, handleDelete }) {
+  const createItems = list.map((item) => (
     <div className="list">
-      <ListItem content={item} onClick={() => handleDelete(item)} />
+      <ListItem
+        key={item.id}
+        title={item.title}
+        onClick={() => handleDelete(item)}
+      />
     </div>
   ));
-
-  return listItems;
+  return <div>{createItems}</div>;
 }
-
-export default List;
-
-// TODO: Add key to each list item, ask why key={Math.random().toString(36).slice(2)} does not work
