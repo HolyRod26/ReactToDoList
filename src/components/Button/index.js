@@ -2,16 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./index.css";
 
-export default function Button({ onClick, label, isSubmit }) {
-  const createSubmitButton = (isSubmit) => {
-    return isSubmit ? "submit" : "button";
-  };
-
+export default function Button({ onClick, label, type }) {
   return (
     <button
       style={{ margin: "1rem" }}
       onClick={onClick}
-      type={createSubmitButton(isSubmit)}
+      type={type}
       className="button-add"
     >
       {label}

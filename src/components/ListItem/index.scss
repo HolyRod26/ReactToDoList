@@ -1,8 +1,8 @@
 .list-item {
-  width: 30%;
+  width: 40%;
   border: 1px solid black;
   border-radius: 0.5rem;
-  height: 15%;
+  height: 20%;
   background-color: lightgray;
   margin: 1rem auto;
   display: flex;
@@ -10,5 +10,5 @@
   justify-content: space-between;
 }
 p {
-  margin: 1rem;
+  margin: 0 auto;
 }

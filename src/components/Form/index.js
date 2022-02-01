@@ -1,6 +1,5 @@
 import Input from "../Input";
 import Button from "../Button";
-import { v4 as uuidv4 } from "uuid";
 import "./index.css";
 
 //Form cambiado
@@ -25,8 +24,12 @@ export default function Form({ label, handleAddingItem, Task }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>{label}</label>
-      <Input handleInputChange={handleInputChange} value={inputValue} />
+      <label value="Add a new Task:">{label}</label>
+      <Input
+        handleInputChange={handleInputChange}
+        value={inputValue}
+        inputType="text"
+      />
       <Button
         isSubmit={true}
         label={"Add Task to List"}
