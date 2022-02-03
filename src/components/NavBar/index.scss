@@ -1,0 +1,38 @@
+.nav-bar {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #0f0ffce3;
+  box-sizing: border-box;
+  .content {
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+}
+.bars {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-left: 1rem;
+    li {
+      margin: 0 2rem;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+  color: white;
+}

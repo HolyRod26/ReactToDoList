@@ -4,7 +4,7 @@ import "./index.css";
 
 // TODO: Make list expand items, not just display all the array
 
-export default function PendingList({ list, setList }) {
+export default function CompletedList({ list, setList }) {
   const handleDelete = (itemToDelete) => {
     const result = window.confirm(
       "Are you sure you want to delete this task?..."
@@ -29,14 +29,13 @@ export default function PendingList({ list, setList }) {
   };
 
   const createItems = list.map((item) => {
-    const { done, id, title } = item;
-    if (done === false) {
+    if (item.done === true) {
       return (
         <>
           <ListItem
-            key={id}
-            title={title}
-            done={done}
+            key={item.id}
+            title={item.title}
+            done={item.done}
             handleDelete={() => handleDelete(item)}
             handleCompleted={() => handleCompleted(item)}
           />
@@ -45,5 +44,22 @@ export default function PendingList({ list, setList }) {
     }
   });
 
-  return <div className="list">{createItems}</div>;
+  return <div>{createItems}</div>;
 }
+
+// TODO: Refactorizar item.title usando desestructuracion
+/**
+ * 
+ const createItems = list.map((item) => (
+    <div className="list">
+      <ListItem
+        key={item.id}
+        title={item.title}
+        completed={item.completed}
+        handleCompleted={item.handleCompleted}
+        handleDelete={() => handleDelete(item)}
+        handleCompleted={() => handleCompleted(item)}
+      />
+    </div>
+  ));
+ */

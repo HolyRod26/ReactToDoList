@@ -1,9 +1,9 @@
 import Form from "../Form";
 import PendingList from "../PendingList";
+import CompletedList from "../CompletedList";
 import "./index.css";
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { Link, Routes, Route } from "react-router-dom";
 //
 export default function FormContainer() {
   const [list, setList] = useState([]);
@@ -47,24 +47,17 @@ export default function FormContainer() {
   return (
     <div className="container">
       <Form list={list} handleAddingItem={handleAddingItem} Task={Task} />
-
-      <PendingList list={list} setList={setList} />
     </div>
   );
 }
 
 /**
- * const [inputValue, setInputValue] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(inputValue);
-    setInputValue("");
-  };
  * 
-
-
-  handleDelete={handleDelete}
+ * 
+ * Linea 50: <PendingList list={list} setList={setList}></PendingList>
+ * 
+ * 
+ * 
 
   // Links to each route
   <h1>Welcome back!</h1>
@@ -76,4 +69,7 @@ export default function FormContainer() {
         Completed Tasks
       </Link>{" "}
       <br />
+
+
+      <PendingList list={list} setList={setList} />
  */

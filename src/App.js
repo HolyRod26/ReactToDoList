@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
 import FormContainer from "./components/FormContainer";
-import { render } from "react-dom";
-import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import Routing from "./Routing";
 
 /* 
   Make sure you use the hooks ‘useState’ and ‘useEffect’ Done
@@ -16,10 +16,7 @@ import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <FormContainer />
-        <Outlet />
-      </div>
+      <Routing />
     </BrowserRouter>
   );
 }
