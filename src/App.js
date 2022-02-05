@@ -1,8 +1,10 @@
 import React from "react";
 import "./App.css";
-import FormContainer from "./components/FormContainer";
-import { BrowserRouter } from "react-router-dom";
-import Routing from "./Routing";
+import NavBar from "./components/NavBar";
+import PendingContainer from "./components/PendingContainer";
+import CompletedContainer from "./components/CompletedContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
 
 /* 
   Make sure you use the hooks ‘useState’ and ‘useEffect’ Done
@@ -16,7 +18,12 @@ import Routing from "./Routing";
 function App() {
   return (
     <BrowserRouter>
-      <Routing />
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/pending" element={<PendingContainer />} />
+        <Route path="/completed" element={<CompletedContainer />} />
+      </Routes>
     </BrowserRouter>
   );
 }

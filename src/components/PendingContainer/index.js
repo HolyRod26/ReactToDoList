@@ -6,7 +6,6 @@ export default function PendingContainer() {
   return (
     <div>
       <FormContainer />
-      <PendingList />
     </div>
   );
 }
