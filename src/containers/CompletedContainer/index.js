@@ -1,10 +1,10 @@
 import React from "react";
-import FormContainer from "../FormContainer";
+import CompletedList from "../../components/CompletedList";
 
 export default function CompletedContainer() {
   return (
     <div>
-      <FormContainer />
+      <CompletedList />
     </div>
   );
 }

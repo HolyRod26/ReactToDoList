@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
-import PendingContainer from "./components/PendingContainer";
-import CompletedContainer from "./components/CompletedContainer";
+import PendingContainer from "./containers/PendingContainer";
+import CompletedContainer from "./containers/CompletedContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
+import Home from "./containers/Home";
 
 /* 
   Make sure you use the hooks ‘useState’ and ‘useEffect’ Done

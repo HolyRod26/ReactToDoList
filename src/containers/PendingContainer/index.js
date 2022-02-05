@@ -1,6 +1,5 @@
 import React from "react";
-import FormContainer from "../FormContainer";
-import PendingList from "../PendingList";
+import FormContainer from "../../containers/FormContainer";
 
 export default function PendingContainer() {
   return (
