@@ -1,12 +1,20 @@
 .nav-bar {
   width: 100%;
   padding: 0.5rem;
-  background-color: #0f0ffce3;
+  background-color: #0f0ffccb;
   box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
   .content {
     max-width: 1024px;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    color: white;
     margin: 0 auto;
   }
 }
@@ -28,11 +36,4 @@
       }
     }
   }
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  padding-right: 1rem;
-  color: white;
 }

@@ -19,8 +19,8 @@ export default function NavBar() {
             </li>
           </ul>
         </nav>
-        <div className="brand">To-Do-List React JS</div>
       </div>
+      <div className="brand">To-Do-List React JS</div>
     </div>
   );
 }

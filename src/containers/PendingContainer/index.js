@@ -1,10 +1,10 @@
 import React from "react";
-import FormContainer from "../../containers/FormContainer";
+import PendingList from "../../components/PendingList";
 
-export default function PendingContainer() {
+export default function PendingContainer({ list, setList }) {
   return (
     <div>
-      <FormContainer />
+      <PendingList list={list} setList={setList} />
     </div>
   );
 }

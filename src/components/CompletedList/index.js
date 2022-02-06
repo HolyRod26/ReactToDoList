@@ -46,20 +46,3 @@ export default function CompletedList({ list, setList }) {
 
   return <div>{createItems}</div>;
 }
-
-// TODO: Refactorizar item.title usando desestructuracion
-/**
- * 
- const createItems = list.map((item) => (
-    <div className="list">
-      <ListItem
-        key={item.id}
-        title={item.title}
-        completed={item.completed}
-        handleCompleted={item.handleCompleted}
-        handleDelete={() => handleDelete(item)}
-        handleCompleted={() => handleCompleted(item)}
-      />
-    </div>
-  ));
- */

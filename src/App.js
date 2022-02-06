@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
-import PendingContainer from "./containers/PendingContainer";
 import CompletedContainer from "./containers/CompletedContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./containers/Home";
@@ -20,9 +19,9 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/pending" element={<PendingContainer />} />
-        <Route path="/completed" element={<CompletedContainer />} />
+        <Route exact path="/" element={<Home />} />
+        <Route path="/pending" element={<Home />} />
+        <Route path="/completed" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
