@@ -6,11 +6,14 @@ export default function Checkbox({ onClick, value }) {
   };
 
   return (
-    <input
-      type="checkbox"
-      onChange={handleCheckboxAction}
-      value={value}
-      className="checkbox-task"
-    />
+    <label>
+      Completed:
+      <input
+        type="checkbox"
+        onChange={handleCheckboxAction}
+        value={value}
+        className="checkbox-task"
+      />
+    </label>
   );
 }
