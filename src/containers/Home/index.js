@@ -20,12 +20,6 @@ export default function Home() {
     Task("TaskInicial3"),
   ];
 
-  const setTasks = () => {
-    setList(handleInitialItems);
-  };
-
-  useEffect(setTasks);
-
   useEffect(() => {
     console.log("🚀 ~ file: index.js ~ line 10 ~ FormContainer ~ list", list);
   }, [list]);
