@@ -14,7 +14,7 @@ export default function Home() {
   const [isCompletedOn, setIsCompletedOn] = useState(false);
 
   const Task = (title = "No title...", done = false) => {
-    return { title: title, done, id: uuidv4() };
+    return { title, done, id: uuidv4() };
   };
 
   const handleInitialItems = [
