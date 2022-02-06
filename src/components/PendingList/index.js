@@ -43,6 +43,7 @@ export default function PendingList({ list, setList }) {
         </>
       );
     }
+    return <></>;
   });
 
   return <div className="list">{createItems}</div>;

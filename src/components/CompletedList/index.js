@@ -42,6 +42,7 @@ export default function CompletedList({ list, setList }) {
         </>
       );
     }
+    return <></>;
   });
 
   return <div>{createItems}</div>;

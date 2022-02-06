@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
-import CompletedContainer from "./containers/CompletedContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./containers/Home";
 

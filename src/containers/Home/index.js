@@ -1,7 +1,4 @@
 import FormContainer from "../FormContainer";
-import CompletedContainer from "../CompletedContainer";
-import PendingContainer from "../PendingContainer";
-
 import "./index.css";
 
 import React, { useState, useEffect } from "react";
@@ -23,9 +20,11 @@ export default function Home() {
     Task("TaskInicial3"),
   ];
 
-  useEffect(() => {
+  const setTasks = () => {
     setList(handleInitialItems);
-  }, []);
+  };
+
+  useEffect(setTasks);
 
   useEffect(() => {
     console.log("🚀 ~ file: index.js ~ line 10 ~ FormContainer ~ list", list);
