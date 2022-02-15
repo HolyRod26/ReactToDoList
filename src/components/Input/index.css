@@ -1,0 +1,23 @@
+.input-task {
+  width: 30%;
+  padding: 16px 24px;
+  margin: 2rem 2rem;
+  outline: none;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px darkgray;
+          box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px darkgray;
+  border-radius: 1rem;
+}
+
+.input-task:hover {
+  border: 1px solid black;
+}
+
+.input-task:active {
+  -webkit-box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px darkgray;
+          box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px darkgray;
+}
+/*# sourceMappingURL=index.css.map */

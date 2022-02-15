@@ -1,9 +1,16 @@
-export default function Input({ handleChange, value }) {
+import "./index.css";
+
+export default function Input({ handleInputChange, value }) {
+  const handleTextAction = (e) => {
+    handleInputChange(e.target.value);
+  };
+
   return (
     <input
       type="text"
-      onChange={(e) => handleChange(e.target.value)}
+      onChange={handleTextAction}
       value={value}
-    ></input>
+      className="input-task"
+    />
   );
 }
